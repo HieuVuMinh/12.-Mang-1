@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            margin-left: 500px;
+            margin-top: 50px;
+        }
+        td{
+            height: 70px;
+            width: 70px;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<script>
+    var a = "<table border='1' width='500' height='500'>"
+    var arr=[["","",""],["","",""],["","",""]];
+    var count = 0;
+
+
+
+        for (var i = 0; i < 3; i++){
+            a += "<tr>";
+            for (var j = 0; j < 3; j++){
+                a += "<td id='"+i+","+j+"' onclick='onClick(this.id)'>"+arr[i][j]+"</td>";
+            }
+            a += "</tr>";
+        }
+        a += "</table>";
+        document.write(a);
+
+
+    //Hàm chuyển khi click
+    function onClick(id) {
+        if (document.getElementById(id).innerHTML === ""){
+            count++;
+            if (count % 2 == 0){
+                document.getElementById(id).innerHTML = "O"
+
+            } else {
+                document.getElementById(id).innerHTML = "X"
+            }
+            arr[i][j] = document.getElementById(id).innerHTML;
+            check();
+        }
+
+        //Hàm kiểm tra
+        function check() {
+            if ()
+        }
+    }
+
+</script>
+</body>
+</html>
